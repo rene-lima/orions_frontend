@@ -1,0 +1,301 @@
+@charset "UTF-8";
+$cor-padrao: #FCBA00;
+$cor-cinza: #111;
+$cor-branco: #fff;
+$cor-texto-menu: #FCBA00;
+$cor-texto-topo:  #4B4B4B;
+$fundo-servicos: #f2f2f2;
+$cor-preto: #111;
+$fundo-icone: #222;
+$botao-desabilitado: #fdd15e;
+$texto-newsletter: #444;
+$fundo-marketing: #555;
+@import url('https://fonts.googleapis.com/css?family=Lato');
+$fonte-lato: 'Lato', sans-serif;
+
+@mixin icones-servicos(){
+        width: 56px;
+        height: 56px;
+        background-color: $fundo-icone;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: -30px;
+}
+
+@mixin gradiente-radial(){
+    background-color: $cor-padrao;
+    background: -webkit-radial-gradient($cor-branco, $cor-padrao); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient($cor-branco, $cor-padrao); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient($cor-branco, $cor-padrao); /* For Firefox 3.6 to 15 */
+    background: radial-gradient($cor-branco, $cor-padrao); /* Standard syntax */
+}
+
+body{
+    margin: 0px;
+}
+
+.header{
+    width: 100%;
+    padding: 20px;
+    background-color: $cor-cinza;
+    a{
+        padding-right: 30px;
+        font-size: 18px;
+        color: $cor-texto-menu;
+        &:hover, &:active{
+            color: $cor-branco;
+        }
+    }
+    img{
+        margin-bottom: 15px;
+    }
+}
+.sub-header{
+    padding-top: 20px;
+    height: 350px;
+    @include gradiente-radial();
+    p{
+     text-align: center;
+     font-size: 30px;
+     color: $cor-texto-topo;
+     font-family: $fonte-lato;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .secao-servicos{
+        padding-top: 160px;
+    }
+}
+
+.secao-servicos{
+    background-color: $fundo-servicos;
+    width: 100%;
+    padding-top: 120px;
+    text-align: center;
+    font-family: $fonte-lato;
+    .wrap-itens{
+        display: flex;
+        justify-content: center;
+    }
+    .item-servico{
+        text-align: center;
+        width: 20%;
+        float: left;
+        padding: 10px;
+        margin: 10px;
+        max-width: 208px;
+        max-height: 208px;
+        min-width: 208px;
+        min-height: 208px;
+        background-color: $cor-branco;
+        border-radius: 50%;
+        border: solid 1px $cor-texto-topo;
+    }
+    .icone-topo{
+        @include icones-servicos();
+        img{
+            width: 30px;
+            height: 30px;
+            padding: 12px;
+        }
+    }
+    .conteudo-item{
+        font-size: 14px;
+    }
+    .titulo-item{
+        font-weight: bold;
+    }
+    .botao-mais{
+        height: 36px;
+        width: 36px;
+        background-color: $cor-padrao;
+        color: $cor-branco;
+        margin: 0 auto;
+        font-size: 26px;
+        border-radius: 50%;
+        &:hover{
+            background-color: $cor-preto;
+        }
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .secao-servicos{
+        .wrap-itens{
+            display: block;
+        }
+    }
+}
+
+h4{
+    margin-top: 0;
+    font-size: 25px;
+    color: $cor-preto;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 05px;
+    span{
+      border-bottom: solid 4px $cor-padrao;
+    }
+}
+
+.hold-img{
+    width: 50%;
+    float: left;
+}
+
+.hold-links{
+    margin-top: 40px;
+}
+
+.secao-newsletter{
+    padding: 20px;
+    float: left;
+    padding-left: 30px;
+    font-family: $fonte-lato;
+}
+
+.texto-newsletter{
+    padding-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: $texto-newsletter;
+    font-size: 15px;
+}
+
+.texto-destaque-newsletter{
+    font-weight: bold;
+    font-size: 19px;
+    color: $cor-preto;
+    span{
+        color: $cor-padrao;
+    }
+}
+
+.form-newsletter{
+    width: 50%;
+    float: right;
+    margin: 1.14rem 0 .912rem 0;
+    input[type="text"]{
+        box-shadow: none;
+        border: solid 1px $texto-newsletter;
+        padding-left: 5px;
+        margin-bottom: 5px;
+    &:focus{
+        border-bottom: 1px solid $cor-padrao !important;
+        box-shadow: 0 1px 0 0 $cor-padrao !important;
+    }
+    }
+    input[type="submit"]{
+        background-color: $cor-padrao;
+        border: none;
+        cursor: pointer;
+        color: $cor-branco;
+        padding: 14px;
+        &:disabled{
+            background-color: $botao-desabilitado;
+        }
+    }
+}
+
+.secao-rodape{
+    background-color: $cor-cinza;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    .wrap-img-rodape{
+        width: 100%;
+    }
+}
+
+.mensagem-sucesso{
+    img{
+        width: 122px;
+        margin: 0 auto;
+    }
+    h1,h3{
+        text-align: center;
+        color: $cor-padrao;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 19px;
+    }
+}
+
+.icon-facebook{
+    width: 30px;
+    height: 30px;
+    float: left;
+    padding: 10px;
+}
+
+.icon-instagram{
+    width: 30px;
+    padding: 10px;
+    height: 30px;
+}
+
+.wrap-texto{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $texto-newsletter;
+    font-size: 19px;
+    font-family: $fonte-lato;
+}
+
+.hold-img-quem-somos{
+    img{
+    width: 100%;
+    }
+}
+
+.secao-marketing{
+    background-color: $fundo-marketing;
+    color: $cor-branco;
+    padding: 20px;
+    img{
+        width: 100%;
+    }
+    h4{
+        color: $cor-branco;
+    }
+}
+
+.botao-fechar{
+    float: right;
+    font-size: 45px;
+}
+
+.row{
+    margin-bottom: 0px !important;  
+}
+
+.back-top{
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-bottom: -23px;
+    cursor: pointer;
+}
+
+.ativo{
+    color: $cor-branco !important;
+}
+
+.wrap-icones{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+a{
+    cursor: pointer;
+}

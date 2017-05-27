@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+body {
+  margin: 0px; }
+
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: #111; }
+  .header a {
+    padding-right: 30px;
+    font-size: 18px;
+    color: #FCBA00; }
+    .header a:hover, .header a:active {
+      color: #fff; }
+  .header img {
+    margin-bottom: 15px; }
+
+.sub-header {
+  padding-top: 20px;
+  height: 350px;
+  background-color: #FCBA00;
+  background: -webkit-radial-gradient(#fff, #FCBA00);
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#fff, #FCBA00);
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#fff, #FCBA00);
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#fff, #FCBA00);
+  /* Standard syntax */ }
+  .sub-header p {
+    text-align: center;
+    font-size: 30px;
+    color: #4B4B4B;
+    font-family: "Lato", sans-serif; }
+  .sub-header div {
+    display: flex;
+    justify-content: center; }
+
+@media screen and (max-width: 680px) {
+  .secao-servicos {
+    padding-top: 160px; } }
+.secao-servicos {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding-top: 120px;
+  text-align: center;
+  font-family: "Lato", sans-serif; }
+  .secao-servicos .wrap-itens {
+    display: flex;
+    justify-content: center; }
+  .secao-servicos .item-servico {
+    text-align: center;
+    width: 20%;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    max-width: 208px;
+    max-height: 208px;
+    min-width: 208px;
+    min-height: 208px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid 1px #4B4B4B; }
+  .secao-servicos .icone-topo {
+    width: 56px;
+    height: 56px;
+    background-color: #222;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: -30px; }
+    .secao-servicos .icone-topo img {
+      width: 30px;
+      height: 30px;
+      padding: 12px; }
+  .secao-servicos .conteudo-item {
+    font-size: 14px; }
+  .secao-servicos .titulo-item {
+    font-weight: bold; }
+  .secao-servicos .botao-mais {
+    height: 36px;
+    width: 36px;
+    background-color: #FCBA00;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 26px;
+    border-radius: 50%; }
+    .secao-servicos .botao-mais:hover {
+      background-color: #111; }
+
+@media screen and (max-width: 1020px) {
+  .secao-servicos .wrap-itens {
+    display: block; } }
+h4 {
+  margin-top: 0;
+  font-size: 25px;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 05px; }
+  h4 span {
+    border-bottom: solid 4px #FCBA00; }
+
+.hold-img {
+  width: 50%;
+  float: left; }
+
+.hold-links {
+  margin-top: 40px; }
+
+.secao-newsletter {
+  padding: 20px;
+  float: left;
+  padding-left: 30px;
+  font-family: "Lato", sans-serif; }
+
+.texto-newsletter {
+  padding-top: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: #444;
+  font-size: 15px; }
+
+.texto-destaque-newsletter {
+  font-weight: bold;
+  font-size: 19px;
+  color: #111; }
+  .texto-destaque-newsletter span {
+    color: #FCBA00; }
+
+.form-newsletter {
+  width: 50%;
+  float: right;
+  margin: 1.14rem 0 .912rem 0; }
+  .form-newsletter input[type="text"] {
+    box-shadow: none;
+    border: solid 1px #444;
+    padding-left: 5px;
+    margin-bottom: 5px; }
+    .form-newsletter input[type="text"]:focus {
+      border-bottom: 1px solid #FCBA00 !important;
+      box-shadow: 0 1px 0 0 #FCBA00 !important; }
+  .form-newsletter input[type="submit"] {
+    background-color: #FCBA00;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 14px; }
+    .form-newsletter input[type="submit"]:disabled {
+      background-color: #fdd15e; }
+
+.secao-rodape {
+  background-color: #111;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center; }
+  .secao-rodape .wrap-img-rodape {
+    width: 100%; }
+
+.mensagem-sucesso img {
+  width: 122px;
+  margin: 0 auto; }
+.mensagem-sucesso h1, .mensagem-sucesso h3 {
+  text-align: center;
+  color: #FCBA00; }
+.mensagem-sucesso h1 {
+  font-size: 30px; }
+.mensagem-sucesso h3 {
+  font-size: 19px; }
+
+.icon-facebook {
+  width: 30px;
+  height: 30px;
+  float: left;
+  padding: 10px; }
+
+.icon-instagram {
+  width: 30px;
+  padding: 10px;
+  height: 30px; }
+
+.wrap-texto {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #444;
+  font-size: 19px;
+  font-family: "Lato", sans-serif; }
+
+.hold-img-quem-somos img {
+  width: 100%; }
+
+.secao-marketing {
+  background-color: #555;
+  color: #fff;
+  padding: 20px; }
+  .secao-marketing img {
+    width: 100%; }
+  .secao-marketing h4 {
+    color: #fff; }
+
+.botao-fechar {
+  float: right;
+  font-size: 45px; }
+
+.row {
+  margin-bottom: 0px !important; }
+
+.back-top {
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-bottom: -23px;
+  cursor: pointer; }
+
+.ativo {
+  color: #fff !important; }
+
+.wrap-icones {
+  display: flex;
+  justify-content: center;
+  padding: 10px; }
+
+a {
+  cursor: pointer; }
+
+/*# sourceMappingURL=meu-css.css.map */

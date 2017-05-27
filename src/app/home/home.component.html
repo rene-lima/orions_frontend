@@ -1,0 +1,82 @@
+<div class="sub-header">
+  <p>Lorem ipsum dolor sit damet, consectur ipsum dolor.</p>
+  <div>
+    <img src="../arquivos/img/banner.jpg" alt="Home Orion Sites">
+  </div>
+</div>
+<div class="secao-servicos">
+  <h4> <span>serviços</span> </h4>
+  <div class="row wrap-itens">
+    <div class="item-servico">
+      <div class="icone-topo"> <img src="../icones/menu.svg"> </div>
+      <p class="titulo-item"> Hospedagem de sites </p>
+      <p class="conteudo-item"> Lorem ipsum dolor sit amet, consectur adipsing elit </p>
+      <div class="botao-mais"> + </div>
+    </div>
+    <div class="item-servico">
+      <div class="icone-topo"> <img src="../icones/line-chart.svg"> </div>
+      <p class="titulo-item"> Marketing Digital </p>
+      <p class="conteudo-item"> Lorem ipsum dolor sit amet, consectur adipsing elit </p>
+      <div (click)="showMkt()" class="botao-mais">{{status_mkt}}</div>
+    </div>
+    <div class="item-servico">
+      <div class="icone-topo"> <img src="../icones/desktop.svg"></div>
+      <p class="titulo-item"> Criação de sites </p>
+      <p class="conteudo-item"> Lorem ipsum dolor sit amet, consectur adipsing elit </p>
+      <div class="botao-mais"> + </div>
+    </div>
+    <div class="item-servico">
+      <div class="icone-topo">
+        <img src="../icones/id-card.svg">
+      </div>
+      <p class="titulo-item"> Identidade Visual </p>
+      <p class="conteudo-item"> Lorem ipsum dolor sit amet, consectur adipsing elit </p>
+      <div class="botao-mais"> + </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="mkt_show" class="row animated fadeIn secao-marketing">
+  <h4 class="col s10"><span>Marketing Digital </span></h4>
+  <span class="col s2 botao-fechar" (click)="closeMkt()"> X </span>
+  <div class="row">
+    <div class="col s4">
+      <img src="../arquivos/img/marketing-digital.jpeg" alt="Orion Sites - Marketing Digital">
+    </div>
+    <div class="col s8">
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+        sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+        quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+        qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+    </div>
+  </div>
+</div>
+<div class="row secao-newsletter">
+  <div class="col m6 s23">
+    <h4> <span> newsletter </span> </h4>
+    <div class="texto-destaque-newsletter">
+      Assine nossa newsletter e receba todas as novidades do time <span>Orions</span>!
+    </div>
+    <div class="texto-newsletter">
+      Lorem ipsum Lorem ipsum sit damet Lorem dolor amet damet dolor Lorem sit adipsing Lorem dolor amet damet dolor Lorem sit
+      adipsing
+    </div>
+  </div>
+  <div *ngIf="!servSuccess" class="col m6 s12 form-newsletter">
+    <form [formGroup]="formNews" (ngSubmit)="enviaNews(formNews.value)">
+      <input type="text" name="nome" formControlName="nome" required placeholder="Nome*">
+      <input type="text" name="email" formControlName="email" required placeholder="Email*">
+      <input class="col m8 s12" type="text" name="telefone" formControlName="telefone" placeholder="Telefone">
+      <div class="col m1"></div>
+      <input class="col m3 s12" type="submit" [disabled]="!formNews.valid" value="ENVIAR">
+    </form>
+  </div>
+  <div *ngIf="servSuccess" class="animated fadeIn col m6 s12 mensagem-sucesso">
+    <div class="center-align"> <img src="../icones/smile.svg"> </div>
+    <h1>OBRIGADO</h1>
+    <h3> POR PARTICIPAR DA LISTA ORIONS! </h3>
+  </div>
+</div>
